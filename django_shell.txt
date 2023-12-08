@@ -1,0 +1,67 @@
+python.exe manage.py shell - запуск django shell(a)
+
+from django.contrib.auth.models import User - импорт
+
+
+1)user1 = User.objects.create_user('username1')
+user2 = User.objects.create_user('username2')  создания новых пользователей 
+
+2) author1 = Author.objects.create(user=user1) создания 2 объектов
+author2 = Author.objects.create(user=user2)
+
+3) category1 = Category(name='Category 1') создания 4 категорий
+   category1.save()
+
+   category2 = Category(name='Category 2')
+   category2.save()
+
+  category3 = Category(name='Category 3')
+  category3.save()
+
+ category4 = Category(name='Category 4')
+ category4.save()
+
+4) article1 = Article.objects.create(title='Article 1', content='Content of Article 1')
+article2 = Article.objects.create(title='Article 2', content='Content of Article 2')
+
+
+news = News.objects.create(title='News', content='Content of News')
+
+
+5) category1 = Category.objects.get(name='category1')
+category2 = Category.objects.get(name='category2') 
+
+author1.categories.add(category1, category2)
+author2.categories.add(category1, category2)
+
+6) post1 = Post.objects.get(id=1)  
+post2 = Post.objects.get(id=2) 
+post3 = Post.objects.get(id=3) 
+post4 = Post.objects.get(id=4) 
+ 
+comment1 = Comment.objects.create(post=post1, text='First comment')
+comment2 = Comment.objects.create(post=post2, text='Second comment')
+comment3 = Comment.objects.create(post=post3, text='Third comment')
+comment4 = Comment.objects.create(post=post4, text='Fourth comment')
+
+7)user1 = User.objects.get(username='username1')
+user1.save()
+8) username = top_user.user.username
+username = top_user.user.username
+rating = top_user.rating
+9) 
+sp = Post()
+lsp.like()
+lsp.dislake()
+print(lsp)       
+
+
+10)
+d = Comment()
+d.like()
+d.dislike()
+print(d)
+
+
+
+
